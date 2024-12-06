@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from "styled-components";
+import {Routes, Route, createBrowserRouter, RouterProvider} from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0)
+// layout import statements go here
+import Header from "./Components/layout/Header.tsx";
+import Nav from "./Components/layout/Nav.tsx";
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+// component import statements go here
+import Home from "./Components/mains/Home.tsx";
+import Pack from "./Components/mains/Pack.tsx";
+import Deck from "./Components/mains/Deck.tsx";
+
+const PageWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    margin: 0 auto;
+`;
+
+const Container = styled.div`
+    font-family: Arial, Monospaced, "Droid Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+`;
+
+function Root() {
+    return (
+    <PageWrapper>
+        <Header/>
+        <Container>
+            <Nav/>
+            <Routes>
+                <Route path={`/`}
+                       element={<Home/>}
+                />
+                <Route path={`/pack`}
+                       element={<Pack/>}
+                />
+                <Route path={`/deck`}
+                       element={<Deck/>}
+                />
+            </Routes>
+        </Container>
+    </PageWrapper>
+    );
 }
 
+const router = createBrowserRouter(
+    [{path: "*", Component: Root}]
+);
+
+function App() {
+  return (
+        <><RouterProvider router={router}/></>
+  )
+}
 export default App
