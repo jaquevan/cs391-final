@@ -38,7 +38,7 @@ export default function Nav() {
     return (
         <StyledNav>
             <StyledUl>
-                <li><StyledLink to={`/`}>View Pokemon</StyledLink></li>
+                <li><StyledLink to={`/`}>Home</StyledLink></li>
                 <li><StyledLink to={`/pack`}>Open Pack</StyledLink></li>
                 <li><StyledLink to={`/deck`}>Create Deck</StyledLink></li>
             </StyledUl>
