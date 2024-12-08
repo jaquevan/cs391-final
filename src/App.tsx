@@ -4,6 +4,7 @@ import {Routes, Route, createBrowserRouter, RouterProvider} from 'react-router-d
 // layout import statements go here
 import Header from "./Components/layout/Header.tsx";
 import Nav from "./Components/layout/Nav.tsx";
+import Footer from "./Components/layout/Footer.tsx";
 
 // component import statements go here
 import Home from "./Components/mains/Home.tsx";
@@ -13,7 +14,7 @@ import Deck from "./Components/mains/Deck.tsx";
 const PageWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 99vw;
+    width: 100%;
     margin: 0 auto;
 `;
 
@@ -25,6 +26,7 @@ const Container = styled.div`
 
 function Root() {
     return (
+        <>
     <PageWrapper>
         <Header/>
         <Container>
@@ -42,6 +44,9 @@ function Root() {
             </Routes>
         </Container>
     </PageWrapper>
+
+    <Footer/>
+    </>
     );
 }
 

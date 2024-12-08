@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 
 const StyledNav = styled.nav`
     background-color: black;
-    width: 97vw;
+    width: 100vw;
     font-size: calc(4px + 1.5vw);
     font-family: Arial, "Droid Sans", sans-serif;
-    margin: 1.5% 0;
+    margin: 0 auto;
     padding: 1%;
-    border: 2px solid rebeccapurple;
-    border-radius: 5px;
+    border: 2px solid darkorange;
 `;
 
 const StyledLink = styled(Link)`

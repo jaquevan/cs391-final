@@ -5,9 +5,9 @@ const DeckLayoutWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 5% 0;
+    padding: 5% .1%;
     background: grey;
-    width: 90vw;
+    width: 100vw;
 `;
 
 const CardSlot = styled.div`
@@ -35,10 +35,16 @@ const CardSlotsContainer = styled.div`
     width: 100%;
 `;
 
+const StyledText = styled.h1`
+    color: white;
+    margin: 0;
+    padding: 0;
+`;
+
 export default function DeckLayout() {
     return (
         <DeckLayoutWrapper>
-            <h1>Pokemon Team</h1>
+            <StyledText>Your Pokemon Team</StyledText>
             <CardSlotsContainer>
                 <CardSlot>Pokemon 1 - Ace or EX card</CardSlot>
                 <CardSlot>Card 2</CardSlot>
