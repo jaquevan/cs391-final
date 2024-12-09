@@ -28,6 +28,19 @@ export async function getRandomPokemonCard(): Promise<PokemonCard> {
     const randomIndex = Math.floor(Math.random() * data.length);
     return data[randomIndex] as PokemonCard;
 }
+export async function getPokemonCardByName(cardName: string): Promise<PokemonCard> {
+    const apiKey = import.meta.env.VITE_API_KEY as string;
+    if (!apiKey) throw new Error('You got no API key!');
+
+    const response = await fetch(`https://api.pokemontcg.io/v2/cards?q=name:${cardName}`, {
+        headers: { 'X-Api-Key': apiKey }
+    });
+    if (!response.ok) throw new Error('Failed to fetch cards');
+
+    const { data } = await response.json();
+    return data as PokemonCard;
+}
+
 
 export async function getRandomPokemonCards(count: number): Promise<PokemonCard[]> {
     const apiKey = import.meta.env.VITE_API_KEY as string;
