@@ -41,6 +41,7 @@ export default function Nav() {
                 <li><StyledLink to={`/`}>Home</StyledLink></li>
                 <li><StyledLink to={`/pack`}>Open Pack</StyledLink></li>
                 <li><StyledLink to={`/deck`}>Create Deck</StyledLink></li>
+                <li><StyledLink to={'/randomCard'}>Random Card</StyledLink></li>
             </StyledUl>
         </StyledNav>
     );
