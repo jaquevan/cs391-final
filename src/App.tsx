@@ -10,7 +10,7 @@ import Footer from "./Components/layout/Footer.tsx";
 import Home from "./Components/mains/Home.tsx";
 import Pack from "./Components/mains/Pack.tsx";
 import Deck from "./Components/mains/Deck.tsx";
-import RandomCard from "./Components/other/RandomCard.tsx";
+import FindACard from "./Components/other/FindACard.tsx";
 const PageWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -41,8 +41,8 @@ function Root() {
                 <Route path={`/deck`}
                        element={<Deck/>}
                 />
-                <Route path={'/randomCard'}
-                       element={<RandomCard/>}
+                <Route path={'/findacard'}
+                       element={<FindACard/>}
                 />
             </Routes>
         </Container>

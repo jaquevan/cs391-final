@@ -28,6 +28,7 @@ export async function getRandomPokemonCard(): Promise<PokemonCard> {
     const randomIndex = Math.floor(Math.random() * data.length);
     return data[randomIndex] as PokemonCard;
 }
+
 export async function getPokemonCardByName(cardName: string): Promise<PokemonCard> {
     const apiKey = import.meta.env.VITE_API_KEY as string;
     if (!apiKey) throw new Error('You got no API key!');

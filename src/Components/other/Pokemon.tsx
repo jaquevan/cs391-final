@@ -3,6 +3,20 @@
 import { useEffect, useState } from "react";
 import { PokemonCard } from "../../interfaces/PokemonCard";
 import {getRandomPokemonCard} from "../../Route";
+import styled from "styled-components";
+
+const BubbleDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 20vw;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 45px;
+`;
+
 
 export default function Pokemon() {
     const [card, setCard] = useState<PokemonCard | null>(null);
@@ -21,7 +35,7 @@ export default function Pokemon() {
     }, []);
 
     return (
-        <div>
+        <BubbleDiv>
             {card ? (
                 <>
                     <img src={card.images?.small} alt={card.name}/>
@@ -30,6 +44,6 @@ export default function Pokemon() {
             ) : (
                 <p>Loading...</p>
             )}
-        </div>
+        </BubbleDiv>
     );
 }
