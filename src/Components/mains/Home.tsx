@@ -20,8 +20,9 @@ const Subtitle = styled.h2`
 `;
 
 const Image = styled.img`
-    width: 300px;
-    height: 50%;
+    padding-top: 5%;
+    width: 50vh;
+    height: auto;
     margin-top: 20px;
 `;
 
