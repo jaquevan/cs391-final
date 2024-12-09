@@ -1,36 +1,39 @@
+//Done by Jordan Lin used styled components and used function from route.tsx
 import { useState } from 'react';
 import styled from 'styled-components';
 import DeckLayout from '../other/DeckLayout.tsx';
 import { getPokemonCardByName } from '../../Route';
 
 const StyledDiv = styled.div`
-  margin: 0 auto;
-  text-align: center;
-  width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,189,39,1) 27%, rgba(0,212,255,1) 100%);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 `;
 
 const SearchBar = styled.input`
-  width: 50%;
-  padding: 10px;
-  margin: 20px 0;
+  width: 70%;
+  margin: 1%;
   border: 2px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: calc(1vh + .5rem);
 `;
 
 const AddButton = styled.button`
-  padding: 10px 20px;
+  padding: 4% 5%;
   background-color: yellow;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: calc(1vh + .5rem);
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 2%;
 
   &:hover {
     background-color: gold;
@@ -47,19 +50,19 @@ export default function Deck() {
         try {
             const card = await getPokemonCardByName(searchTerm);
 
-            // Debugging the fetched card
+
             console.log('Fetched Card:', card);
             if (!card || !card.name) {
                 alert('No card found with that name!');
                 return;
             }
 
-            // Find the first empty slot
+
             const firstEmptySlotIndex = deck.findIndex((slot) => !slot.name);
             console.log('First Empty Slot Index:', firstEmptySlotIndex);
 
             if (firstEmptySlotIndex !== -1) {
-                // Use functional setState to avoid stale state
+
                 setDeck((prevDeck) => {
                     const updatedDeck = [...prevDeck];
                     updatedDeck[firstEmptySlotIndex] = {

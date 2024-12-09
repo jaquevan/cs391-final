@@ -1,4 +1,4 @@
-// Created by Evan Jaquez
+// Created by Evan Jaquez with updated functionality for adding pokemon cards in to the deck
 import styled from 'styled-components';
 
 const DeckLayoutWrapper = styled.div`
