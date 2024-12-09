@@ -1,3 +1,5 @@
+// Made by Artemios Kayas, gets a and displays a random pokemon card
+
 import { useEffect, useState } from "react";
 import { PokemonCard } from "../../interfaces/PokemonCard";
 import {getRandomPokemonCard} from "../../Route";

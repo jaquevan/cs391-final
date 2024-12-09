@@ -1,3 +1,4 @@
+//Interface for the pokemon card object made by Artemios Kayas
 export interface PokemonCard {
     id: string;
     name: string;

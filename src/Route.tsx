@@ -1,4 +1,4 @@
-// Artemios Kayas API methods
+// Artemios Kayas, API methods for fetching pokemon cards by varius specifications
 
 import { PokemonCard } from "./interfaces/PokemonCard";
 
