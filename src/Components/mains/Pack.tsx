@@ -1,3 +1,5 @@
+// Component made by Artmemios Kayas with changes made by Evan Jaquez
+
 import styled from "styled-components";
 import {useState, useEffect} from "react";
 import {PokemonCard} from "../../interfaces/PokemonCard";
@@ -35,12 +37,30 @@ const PackButton = styled.button`
     }
 `;
 
+const NextButton = styled.button`
+    cursor: pointer;
+    padding: 1%;
+    margin-top: 2%;
+    margin-right: 1%;
+    background-color: deepskyblue;
+    border: 2px solid deepskyblue;
+    border-radius: 8px;
+    color: white;
+
+    &:hover {
+        background-color: lightblue;
+        border: 2px solid lightblue;
+        color: black;
+    }
+`;
+
 export default function Pack() {
     const [cards, setCards] = useState<PokemonCard[]>([]);
     const [preloadedCards, setPreloadedCards] = useState<PokemonCard[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isPackOpen, setIsPackOpen] = useState(false);
     const [isPackClicked, setIsPackClicked] = useState(false);
+    const [currentCard, setCurrentCard] = useState(0);
 
 
     // moved  this code to make fetch pack reuseable when a user  wants to open another pack
@@ -73,6 +93,10 @@ export default function Pack() {
         fetchPack();
     };
 
+    const handleNextCard = () => {
+        setCurrentCard((prevIndex) => (prevIndex + 1) % cards.length);
+    };
+
 
     return (
 
@@ -88,14 +112,13 @@ export default function Pack() {
 
             {isPackClicked && (
                 <>
-                    <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px'}}>
-                        {cards.map((card) => (
-                            <div key={card.id}>
-                                <img src={card.images?.small} alt={card.name}/>
-                            </div>
-                        ))}
+                    <div>
+                        <img src={cards[currentCard].images?.small} alt={cards[currentCard].name} />
                     </div>
-                    <PackButton onClick={handleOpenAnotherPack}>Open Another Pack</PackButton>
+
+                <NextButton onClick={handleNextCard}>Next Card</NextButton>
+
+                <PackButton onClick={handleOpenAnotherPack}>Open Another Pack</PackButton>
                 </>
             )}
 
