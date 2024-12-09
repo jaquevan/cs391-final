@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import diglett from "../../../public/diglett.png";
+import diglett from "../../public/diglett.png";
 
 const StyledFooter = styled.footer`
     background-color: saddlebrown;

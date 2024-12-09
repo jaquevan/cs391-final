@@ -1,4 +1,4 @@
-// Created by Evan Jaquez with updated functionality for adding pokemon cards in to the deck
+// Originally Created by Evan Jaquez with updated functionality for adding pokemon cards in to the deck by Jordan
 import styled from 'styled-components';
 
 const DeckLayoutWrapper = styled.div`
@@ -6,20 +6,28 @@ const DeckLayoutWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 5% 0.1%;
+    padding: 1.5% 0.1%;
     background: grey;
     width: 100vw;
+    height: auto;
+   
+    @media screen and (max-width: 1600px){
+        height: 100vh;
+    }
+    
 `;
 
 const CardSlotsContainer = styled.div`
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding-bottom: 2%;
+    
 `;
 
 const CardSlot = styled.div<{ isEmpty: boolean }>`
-    width: 20vw;
-    height: 23vw;
+    width: 15vw;
+    height: 20vw;
     border: 2px solid ${({ isEmpty }) => (isEmpty ? 'yellow' : 'green')};
     border-radius: 11px;
     margin: 0.8%;
@@ -61,7 +69,7 @@ type DeckLayoutProps = {
 export default function DeckLayout({ deck }: DeckLayoutProps) {
     return (
         <DeckLayoutWrapper>
-            <StyledText>Your Pokémon Team</StyledText>
+            <StyledText>Your Team</StyledText>
             <CardSlotsContainer>
                 {deck.map((card, index) => (
                     <CardSlot key={index} isEmpty={!card.name}>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import diglett from "../../../public/diglett.png";
+import diglett from "../../public/diglett.png";
 
 
 const StyledDiv = styled.div`

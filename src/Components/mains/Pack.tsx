@@ -5,7 +5,7 @@ import {useState, useEffect} from "react";
 import {PokemonCard} from "../../interfaces/PokemonCard";
 import {getRandomPokemonCards} from "../../Route";
 import PackAnimation from "../other/PackAnimation";
-import loadingGif from '../../assets/pokeballs.gif';
+import loadingGif from '../../public/pokeballs.gif';
 
 const StyledDiv = styled.div`
     text-align: center;

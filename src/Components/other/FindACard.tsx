@@ -9,9 +9,10 @@ const MyDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 5% auto;
     align-items: center;
-    height: 72vh;
-    background-color: lightgrey;
+    width: 100vw;
+    
 `;
 
 const SmallDiv = styled.div`
@@ -25,7 +26,8 @@ const SmallDiv = styled.div`
 const MyH1 = styled.h1`
     margin: 1%;
     font-size: calc(4px + 1.5vw);
-    color: purple;
+    color: mediumaquamarine;
+    text-align: center;
 `;
 
 const SearchBar = styled.input`
@@ -41,7 +43,7 @@ const SearchButton = styled.button`
     height: 50%;
     padding: 10px 20px;
     background-color: yellow;
-    border: none;
+    border: 1px solid mediumaquamarine;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
@@ -87,11 +89,11 @@ export default function FindACard() {
 
     return (
         <MyDiv>
-            <MyH1>Search For A Pokémon Card</MyH1>
+            <MyH1>Search For A Pokemon Card</MyH1>
             <SmallDiv>
                 <SearchBar
                     type="text"
-                    placeholder="Enter Pokémon name..."
+                    placeholder="Enter Pokemon name..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />

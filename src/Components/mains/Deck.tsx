@@ -3,24 +3,38 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import DeckLayout from '../other/DeckLayout.tsx';
 import { getPokemonCardByName } from '../../Route';
+import cardImage from '../../public/card.png';
 
 const StyledDiv = styled.div`
     margin: 0 auto;
     text-align: center;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,189,39,1) 27%, rgba(0,212,255,1) 100%);
+    background: black;
+    background-image: url(${cardImage});
+    background-repeat: repeat;
+    background-size: contain;
+    color: white;
     width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2%;
+`;
+
+const StyledText = styled.h1`
+    color: black; 
+    font-size: 2.5rem;
+    background-color: white;
+    margin-bottom: .5%;
     
 `;
 
 const SearchBar = styled.input`
   width: 70%;
   margin: 1%;
+    padding: 2%;
   border: 2px solid #ccc;
   border-radius: 5px;
   font-size: calc(1vh + .5rem);
@@ -34,6 +48,8 @@ const AddButton = styled.button`
   font-size: calc(1vh + .5rem);
   cursor: pointer;
   margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 5%;
 
   &:hover {
     background-color: gold;
@@ -76,7 +92,7 @@ export default function Deck() {
                 alert('Deck is full!');
             }
         } catch (error) {
-            console.error('Error fetching Pokémon card:', error);
+            console.error('Error fetching pokemon card:', error);
             alert('Failed to fetch card. Please try again.');
         }
     };
@@ -84,18 +100,21 @@ export default function Deck() {
 
 
     return (
+        <>
         <StyledDiv>
-            <h1>Build Your Pokémon Deck</h1>
+            <StyledText>Build Your Pokemon Deck</StyledText>
             <div>
                 <SearchBar
                     type="text"
-                    placeholder="Enter Pokémon name..."
+                    placeholder="Enter Name of Pokemon..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <AddButton onClick={handleSearch}>Add to Deck</AddButton>
             </div>
-            <DeckLayout deck={deck}/>
         </StyledDiv>
+
+        <DeckLayout deck={deck}/>
+        </>
     );
 }

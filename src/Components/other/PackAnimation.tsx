@@ -5,10 +5,10 @@ import {useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
 
 // import pack images
-import dragonite from '../../assets/dragonite-pack.jpg';
-import lugia from '../../assets/lugia-pack.png';
-import pika from '../../assets/pikachu.webp';
-import latias from '../../assets/latias.webp';
+import dragonite from '../../public/dragonite-pack.jpg';
+import lugia from '../../public/lugia-pack.png';
+import pika from '../../public/pikachu.webp';
+import latias from '../../public/latias.webp';
 
 
 const PackDiv = styled.div`
