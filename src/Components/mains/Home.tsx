@@ -11,17 +11,17 @@ const StyledDiv = styled.div`
 
 const Title = styled.h1`
     font-size: 2.5em;
-    color: #ff6347;
+    color: saddlebrown;
 `;
 
 const Subtitle = styled.h2`
     font-size: 1.5em;
-    color: #4682b4;
+    color: lightpink;
 `;
 
 const Image = styled.img`
     width: 300px;
-    height: auto;
+    height: 50%;
     margin-top: 20px;
 `;
 

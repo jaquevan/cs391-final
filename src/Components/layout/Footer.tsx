@@ -2,7 +2,7 @@ import styled from "styled-components";
 import diglett from "../../../public/diglett.png";
 
 const StyledFooter = styled.footer`
-    background-color: lightskyblue;
+    background-color: saddlebrown;
     text-align: center;
     width: 100%;
     margin: 0 auto;

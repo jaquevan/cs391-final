@@ -2,25 +2,25 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 const StyledNav = styled.nav`
-    background-color: black;
+    background-color: lightpink;
     width: 100vw;
     font-size: calc(4px + 1.5vw);
     font-family: Arial, "Droid Sans", sans-serif;
     margin: 0 auto;
     padding: 1%;
-    border: 2px solid darkorange;
+    border: 2px solid dimgrey;
 `;
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    background-color: black;
+    background-color: lightpink;
     justify-content: center;
     width: 100%;
     margin-right: 2%;
-    color: white;
+    color: black;
 
     &:hover {
-        color: darkorange;
+        color: saddlebrown;
     }
 `;
 

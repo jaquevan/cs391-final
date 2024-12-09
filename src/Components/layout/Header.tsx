@@ -3,11 +3,12 @@ import Typography from '@mui/material/Typography';
 
 const Title = styled(Typography)`
     text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;;
     padding: 20px 0;
 `;
 
 const StyledHeader = styled.header`
-    background-color: lightskyblue;
+    background-color: saddlebrown;
     display: flex;
     justify-content: center;
     align-items: center;
