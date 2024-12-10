@@ -62,8 +62,7 @@ const TearLine = styled(motion.div)`
 const ChangePackButton = styled.button`
     display: flex;
     flex-direction: column;
-    margin: 15% auto;
-
+    margin: 5% auto;
     background-color: deepskyblue;
     border: 2px solid deepskyblue;
     border-radius: 8px;

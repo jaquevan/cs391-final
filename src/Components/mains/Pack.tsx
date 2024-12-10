@@ -7,9 +7,13 @@ import {getRandomPokemonCards} from "../../Route";
 import PackAnimation from "../other/PackAnimation";
 import loadingGif from '../../public/pokeballs.gif';
 
+const PageWrapper = styled.div`
+    background-color: white;
+`;
+
 const StyledDiv = styled.div`
     text-align: center;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
 `;
@@ -29,8 +33,8 @@ const CardImage = styled.img`
 
 const PackButton = styled.button`
     cursor: pointer;
-    padding: 3%;
-    margin-top: 4%;
+    padding: 1%;
+    margin: 1% auto;
     background-color: deepskyblue;
     border: 2px solid deepskyblue;
     border-radius: 8px;
@@ -46,8 +50,7 @@ const PackButton = styled.button`
 const NextButton = styled.button`
     cursor: pointer;
     padding: 1%;
-    margin-top: 2%;
-    margin-right: 1%;
+    margin: 0 auto;
     background-color: darkorange;
     border: 2px solid orange;
     border-radius: 8px;
@@ -105,7 +108,7 @@ export default function Pack() {
 
 
     return (
-
+    <PageWrapper>
         <StyledDiv>
             {isLoading && (
                 <div>
@@ -131,6 +134,7 @@ export default function Pack() {
             )}
 
         </StyledDiv>
+    </PageWrapper>
 
     );
 }

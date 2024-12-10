@@ -26,7 +26,10 @@ const StyledText = styled.h1`
     color: black; 
     font-size: 2.5rem;
     background-color: white;
+    border: none;
+    border-radius: 5px;
     margin-bottom: .5%;
+    padding: 0 1%;
     
 `;
 
@@ -48,7 +51,7 @@ const AddButton = styled.button`
   cursor: pointer;
   margin-left: 2%;
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 
   &:hover {
     background-color: gold;

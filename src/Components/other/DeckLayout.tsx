@@ -56,7 +56,7 @@ const CardSlot = styled.div<{ isEmpty: boolean }>`
 
 const StyledText = styled.h1`
     color: white;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 `;
 
