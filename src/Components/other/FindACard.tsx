@@ -92,7 +92,7 @@ export default function FindACard() {
     }
 
     return (
-
+        //display the card
         <MyDiv>
             <MyH1>Search For A Pokemon Card</MyH1>
             <SmallDiv>

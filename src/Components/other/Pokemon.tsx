@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { PokemonCard } from "../../interfaces/PokemonCard";
 import {getRandomPokemonCard} from "../../Route";
 import styled from "styled-components";
-
+// styling
 const BubbleDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -17,10 +17,10 @@ const BubbleDiv = styled.div`
     border-radius: 45px;
 `;
 
-
+// gets and displays a random card
 export default function Pokemon() {
     const [card, setCard] = useState<PokemonCard | null>(null);
-
+    // make sure we loaded a card
     useEffect(() => {
         async function fetchCard() {
             try {
@@ -30,10 +30,10 @@ export default function Pokemon() {
                 console.error(err);
             }
         }
-
+        // fetch the card
         fetchCard();
     }, []);
-
+    //display the card
     return (
         <BubbleDiv>
             {card ? (

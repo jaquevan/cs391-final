@@ -74,6 +74,7 @@ export default function Pack() {
 
     // moved  this code to make fetch pack reuseable when a user  wants to open another pack
     const fetchPack = async () => {
+        //Fetch the card and such
         try {
             const fetchedCards = await getRandomPokemonCards(5);
             setPreloadedCards(fetchedCards);
@@ -82,13 +83,13 @@ export default function Pack() {
         } finally {
             setIsLoading(false);
             setIsPackOpen(true);
-        }
+        } //error handling and such
     };
-
+    //make sure that the cards actually get fetched with no errors
     useEffect(() => {
         fetchPack();
     }, []);
-
+        // States to handle different things
     const handlePackClick = () => {
         setCards(preloadedCards);
         setIsPackClicked(true);
@@ -101,7 +102,7 @@ export default function Pack() {
         setPreloadedCards([]);
         fetchPack();
     };
-
+    // index through the cards
     const handleNextCard = () => {
         setCurrentCard((prevIndex) => (prevIndex + 1) % cards.length);
     };

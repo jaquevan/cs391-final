@@ -5,7 +5,12 @@ import { PokemonCard } from "./interfaces/PokemonCard";
 
 // single set id for increased load times during the presentation
 const SET_ID = 'sm35'
+// all of these methods are the same sort of async api calls, just fetch different things
+// all of them work by importing API key from the .env file, then validating it
+//from there, we call the API and give it the key, then return the data
+// Validate to make sure it all returned then return the data
 
+// Get a single card by its ID
 export async function getPokemonCard(cardId: string): Promise<PokemonCard> {
     const apiKey = import.meta.env.VITE_API_KEY as string;
     if (!apiKey) throw new Error('You got no API key!');
@@ -18,7 +23,7 @@ export async function getPokemonCard(cardId: string): Promise<PokemonCard> {
     const { data } = await response.json();
     return data as PokemonCard;
 }
-
+// Get a random card, random effect is achieved by getting all cards, then choosing a random one from the list, using math.random
 export async function getRandomPokemonCard(): Promise<PokemonCard> {
     const apiKey = import.meta.env.VITE_API_KEY as string;
     if (!apiKey) throw new Error('You got no API key!');
@@ -32,6 +37,8 @@ export async function getRandomPokemonCard(): Promise<PokemonCard> {
     const randomIndex = Math.floor(Math.random() * data.length);
     return data[randomIndex] as PokemonCard;
 }
+
+//Find a pokemon card by its Name, different from the ID mehtod, ID wants an ID, this takes the name
 export async function getPokemonCardByName(cardName: string): Promise<PokemonCard | null> {
     const apiKey = import.meta.env.VITE_API_KEY as string;
     if (!apiKey) throw new Error('You got no API key!');
@@ -49,7 +56,8 @@ export async function getPokemonCardByName(cardName: string): Promise<PokemonCar
 }
 
 
-
+// This handles the API call for getting the x amount of random cards for a deck
+// Same math.random method as the single card, but we get x amount of cards
 export async function getRandomPokemonCards(count: number): Promise<PokemonCard[]> {
     const apiKey = import.meta.env.VITE_API_KEY as string;
     if (!apiKey) throw new Error('You got no API key!');
