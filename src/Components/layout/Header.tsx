@@ -1,16 +1,18 @@
 // Made by David Kim
 import styled from "styled-components";
-import Typography from '@mui/material/Typography';
+import diggle from "../../public/diggle.png"
 
-const Title = styled(Typography)`
+const Title = styled.h1`
     text-align: center;
-    font-family: 'Comic Sans MS', cursive, sans-serif;;
+    font-family: cursive; 
     padding: 20px 0;
+    color: white;
 `;
 
 const StyledHeader = styled.header`
-    background-color: saddlebrown;
+    background: url(${diggle});
     display: flex;
+    font-family: Calibri;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -19,7 +21,7 @@ const StyledHeader = styled.header`
 export default function Header() {
     return (
         <StyledHeader>
-            <Title variant="h4">Pokemon Pack Opening</Title>
+            <Title>Pokemon Pack Opening</Title>
         </StyledHeader>
     );
 }
