@@ -12,17 +12,17 @@ const StyledFooter = styled.footer`
     left: 0;
     position: fixed;
 `;
-
+// A styled footer on the bottom
 const FooterText = styled.p`
     margin: 0 auto;
 `;
-
+// basic footer text
 const Logo = styled.img`
     height: 40px;
     margin-left: 20px;
 `;
 
-
+// styled footer, include image, and text 
 export default function Footer() {
     return (
         <StyledFooter>
