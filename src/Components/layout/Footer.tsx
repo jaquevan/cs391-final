@@ -1,3 +1,5 @@
+//Made by David Kim
+
 import styled from "styled-components";
 import diglett from "../../public/diglett.png";
 
