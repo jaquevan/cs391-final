@@ -2,6 +2,10 @@
 
 import { PokemonCard } from "./interfaces/PokemonCard";
 
+
+// single set id for increased load times during the presentation
+const SET_ID = 'sm35'
+
 export async function getPokemonCard(cardId: string): Promise<PokemonCard> {
     const apiKey = import.meta.env.VITE_API_KEY as string;
     if (!apiKey) throw new Error('You got no API key!');
@@ -50,7 +54,7 @@ export async function getRandomPokemonCards(count: number): Promise<PokemonCard[
     const apiKey = import.meta.env.VITE_API_KEY as string;
     if (!apiKey) throw new Error('You got no API key!');
 
-    const response = await fetch(`https://api.pokemontcg.io/v2/cards`, {
+    const response = await fetch(`https://api.pokemontcg.io/v2/cards?q=set.id:${SET_ID}`, {
         headers: { 'X-Api-Key': apiKey }
     });
     if (!response.ok) throw new Error('Failed to fetch cards');
