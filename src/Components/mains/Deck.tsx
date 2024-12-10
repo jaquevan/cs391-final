@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
     background-size: contain;
     color: white;
     width: 100vw;
-    height: auto;
+    height: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

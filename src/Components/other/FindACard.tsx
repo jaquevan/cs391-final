@@ -11,7 +11,7 @@ const MyDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5% auto;
+    margin: 3% auto;
     align-items: center;
     width: 100vw;
     height: auto;
@@ -28,7 +28,7 @@ const SmallDiv = styled.div`
 `;
 
 const MyH1 = styled.h1`
-    margin: 1%;
+    margin: .5%;
     font-size: calc(4px + 1.5vw);
     color: darkorange;
     text-align: center;

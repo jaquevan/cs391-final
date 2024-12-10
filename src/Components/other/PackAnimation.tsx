@@ -138,11 +138,12 @@ export default function PackAnimation({onPackClick}: PackAnimationProps) {
 
     return (
         <>
+            {/*when the pack is clicked it runs the animation and opens the pack */}
             <PackDiv onClick={handlePackClick} animate={controls}>
                 <TearLine/>
                 <PackImage src={packImage} alt="Pack Image"/>
             </PackDiv>
-
+                {/*allows user to change the pack art they open because people have supersitions*/}
                 <ChangePackButton onClick={handleChangePackClick}>
                     Change Pack
                 </ChangePackButton>

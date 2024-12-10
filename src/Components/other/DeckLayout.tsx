@@ -29,7 +29,7 @@ const CardSlot = styled.div<{ isEmpty: boolean }>`
     height: 20vw;
     border: 2px solid ${({ isEmpty }) => (isEmpty ? 'yellow' : 'green')};
     border-radius: 11px;
-    margin: 0.8%;
+    margin: 0.2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +40,8 @@ const CardSlot = styled.div<{ isEmpty: boolean }>`
     &:hover {
         background-color: lightgrey;
         cursor: pointer;
-        transform: scale(1.1);
+        transform: scale(1.01);
+        
     }
 
     img {
