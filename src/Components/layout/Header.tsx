@@ -1,4 +1,5 @@
-// Made by David Kim
+// Made by David Kim Logic: One again used styled components and used an image for the header background. Same structure as the one we did in mp3.
+
 import styled from "styled-components";
 import diggle from "../../public/diggle.png"
 
