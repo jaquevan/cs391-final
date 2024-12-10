@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
-
+//Make a styled nav bar with basics
 const StyledNav = styled.nav`
     background-color: grey;
     width: 100vw;
@@ -12,7 +12,7 @@ const StyledNav = styled.nav`
     padding: 1%;
     border: 2px solid dimgrey;
 `;
-
+// made the hover so that it changes olor when hovered over
 const StyledLink = styled(Link)`
     text-decoration: none;
     background-color: grey;
@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
         color: saddlebrown;
     }
 `;
-
+//styled list stuff 
 const StyledUl = styled.ul`
     list-style-type: none;
     display: flex;
@@ -35,7 +35,7 @@ const StyledUl = styled.ul`
     margin: 0;
     width: 100%;
 `;
-
+// links to different pages with diff mains 
 export default function Nav() {
     return (
         <StyledNav>
