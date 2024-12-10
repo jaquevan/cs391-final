@@ -1,4 +1,5 @@
-// Home page done by David Kim
+// Home page done by David Kim Logic: Wanted to have our mascot spin in the middle and added the two lined transition to have it rotate when hovered. 
+// Other than that all else was basic styled components. 
 import styled from "styled-components";
 import diglett from "../../public/diglett.png";
 import diggle from "../../public/diggle.png";
