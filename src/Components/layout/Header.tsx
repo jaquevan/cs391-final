@@ -3,13 +3,14 @@
 import styled from "styled-components";
 import diggle from "../../public/diggle.png"
 
+//Styled title, basic stuff
 const Title = styled.h1`
     text-align: center;
     font-family: cursive; 
     padding: 20px 0;
     color: white;
 `;
-
+//Styled header with the cool background
 const StyledHeader = styled.header`
     background: url(${diggle});
     display: flex;
@@ -18,7 +19,7 @@ const StyledHeader = styled.header`
     align-items: center;
     padding: 10px;
 `;
-
+// Just styled container and the title
 export default function Header() {
     return (
         <StyledHeader>
