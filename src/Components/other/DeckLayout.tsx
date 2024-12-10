@@ -11,10 +11,9 @@ const DeckLayoutWrapper = styled.div`
     width: 100vw;
     height: auto;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1600px){
         height: 100vh;
     }
-
 `;
 
 const CardSlotsContainer = styled.div`
@@ -22,20 +21,19 @@ const CardSlotsContainer = styled.div`
     justify-content: space-around;
     width: 100%;
     padding-bottom: 2%;
-
 `;
 
 const CardSlot = styled.div<{ isEmpty: boolean }>`
     width: 15vw;
     height: 20vw;
-    border: 2px solid ${({isEmpty}) => (isEmpty ? 'yellow' : 'green')};
+    border: 2px solid ${({ isEmpty }) => (isEmpty ? 'yellow' : 'green')};
     border-radius: 11px;
     margin: 0.8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: ${({isEmpty}) => (isEmpty ? 'white' : '#f0f0f0')};
+    background-color: ${({ isEmpty }) => (isEmpty ? 'white' : '#f0f0f0')};
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     &:hover {
@@ -66,7 +64,7 @@ type DeckLayoutProps = {
     deck: Array<{ name: string; imageUrl: string | null }>;
 };
 
-export default function DeckLayout({deck}: DeckLayoutProps) {
+export default function DeckLayout({ deck }: DeckLayoutProps) {
     return (
         <DeckLayoutWrapper>
             <StyledText>Your Team</StyledText>
@@ -74,7 +72,7 @@ export default function DeckLayout({deck}: DeckLayoutProps) {
                 {deck.map((card, index) => (
                     <CardSlot key={index} isEmpty={!card.name}>
                         {card.imageUrl ? (
-                            <img src={card.imageUrl} alt={card.name}/>
+                            <img src={card.imageUrl} alt={card.name} />
                         ) : (
                             <h3>Empty Slot</h3>
                         )}

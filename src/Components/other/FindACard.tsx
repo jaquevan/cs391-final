@@ -5,6 +5,8 @@ import { useState } from "react";
 import { PokemonCard } from "../../interfaces/PokemonCard";
 import { getPokemonCardByName } from "../../Route";
 //Styled components for this page
+
+
 const MyDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -12,6 +14,8 @@ const MyDiv = styled.div`
     margin: 5% auto;
     align-items: center;
     width: 100vw;
+    height: auto;
+    background-color: grey;
     
 `;
 
@@ -26,7 +30,7 @@ const SmallDiv = styled.div`
 const MyH1 = styled.h1`
     margin: 1%;
     font-size: calc(4px + 1.5vw);
-    color: mediumaquamarine;
+    color: darkorange;
     text-align: center;
 `;
 
@@ -88,6 +92,7 @@ export default function FindACard() {
     }
 
     return (
+
         <MyDiv>
             <MyH1>Search For A Pokemon Card</MyH1>
             <SmallDiv>
@@ -108,5 +113,6 @@ export default function FindACard() {
                 </BubbleDiv>
             )}
         </MyDiv>
+
     );
 }
