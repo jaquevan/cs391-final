@@ -1,6 +1,7 @@
 // Originally Created by Evan Jaquez with updated functionality for adding pokemon cards in to the deck by Jordan
 import styled from 'styled-components';
 
+//styling for deck done using styled components
 const DeckLayoutWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -53,24 +54,28 @@ const CardSlot = styled.div<{ isEmpty: boolean }>`
         text-align: center;
     }
 `;
-
+// Styled header text for displaying the title of the deck
 const StyledText = styled.h1`
-    color: white;
-    margin: 0 auto;
-    padding: 0;
+    color: white; 
+    margin: 0 auto; 
+    padding: 0; 
 `;
 
+// Define the expected prop types for the DeckLayout component
 type DeckLayoutProps = {
-    deck: Array<{ name: string; imageUrl: string | null }>;
+    deck: Array<{ name: string; imageUrl: string | null }>; // Deck is an array of objects containing name and imageUrl
 };
 
+// Main DeckLayout component that receives the deck prop
 export default function DeckLayout({ deck }: DeckLayoutProps) {
     return (
         <DeckLayoutWrapper>
-            <StyledText>Your Team</StyledText>
+            <StyledText>Your Team</StyledText> {/* Title for the deck */}
             <CardSlotsContainer>
+                {/* Iterate over the deck array to create card slots for each item */}
                 {deck.map((card, index) => (
-                    <CardSlot key={index} isEmpty={!card.name}>
+                    <CardSlot key={index} isEmpty={!card.name}> {/* Check if the card slot is empty based on the card's name */}
+                        {/* If the card has an image, display it, otherwise show "Empty Slot" */}
                         {card.imageUrl ? (
                             <img src={card.imageUrl} alt={card.name} />
                         ) : (
