@@ -1,4 +1,4 @@
-//Made by David Kim
+//Made by David Kim, Logic: Used styled components and basic footer structure that we learned in mp3. 
 
 import styled from "styled-components";
 import diglett from "../../public/pngwing.com.png";

@@ -1,4 +1,4 @@
-// Completed by David Kim
+// Completed by David Kim Logic: created styled links to go to each page. Nothing too crazy just a basic nav.
 
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
