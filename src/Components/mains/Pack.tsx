@@ -21,10 +21,16 @@ const Pokeball = styled.img`
     margin: 25% 0;
 `;
 
+const CardImage = styled.img`
+    width: 35vh;  
+    height: auto; 
+    object-fit: cover; 
+`;
+
 const PackButton = styled.button`
     cursor: pointer;
-    padding: 1%;
-    margin-top: 2%;
+    padding: 3%;
+    margin-top: 4%;
     background-color: deepskyblue;
     border: 2px solid deepskyblue;
     border-radius: 8px;
@@ -42,10 +48,10 @@ const NextButton = styled.button`
     padding: 1%;
     margin-top: 2%;
     margin-right: 1%;
-    background-color: deepskyblue;
-    border: 2px solid deepskyblue;
+    background-color: darkorange;
+    border: 2px solid orange;
     border-radius: 8px;
-    color: white;
+    color: black;
 
     &:hover {
         background-color: lightblue;
@@ -113,12 +119,14 @@ export default function Pack() {
             {isPackClicked && (
                 <>
                     <div>
-                        <img src={cards[currentCard].images?.small} alt={cards[currentCard].name} />
+                        <CardImage src={cards[currentCard].images?.small} alt={cards[currentCard].name} />
                     </div>
 
                 <NextButton onClick={handleNextCard}>Next Card</NextButton>
+                    <div>
+                        <PackButton onClick={handleOpenAnotherPack}>Open Another Pack</PackButton>
+                    </div>
 
-                <PackButton onClick={handleOpenAnotherPack}>Open Another Pack</PackButton>
                 </>
             )}
 
