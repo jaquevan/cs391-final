@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 const StyledNav = styled.nav`
-    background-color: lightpink;
+    background-color: grey;
     width: 100vw;
     font-size: calc(4px + 1.5vw);
     font-family: Arial, "Droid Sans", sans-serif;
@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    background-color: lightpink;
+    background-color: grey;
     justify-content: center;
     width: 100%;
     margin-right: 2%;
@@ -47,4 +47,3 @@ export default function Nav() {
             </StyledUl>
         </StyledNav>
     );
-}
