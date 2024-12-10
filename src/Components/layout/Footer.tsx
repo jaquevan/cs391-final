@@ -1,10 +1,10 @@
 //Made by David Kim
 
 import styled from "styled-components";
-import diglett from "../../public/diglett.png";
+import diglett from "../../public/pngwing.com.png";
 
 const StyledFooter = styled.footer`
-    background-color: saddlebrown;
+    background-color: grey;
     text-align: center;
     width: 100%;
     margin: 0 auto;
