@@ -4,6 +4,7 @@ import styled from "styled-components";
 import diglett from "../../public/diglett.png";
 import diggle from "../../public/diggle.png";
 
+//Main container - diggle image
 const StyledDiv = styled.div`
     margin: 0 auto;
     text-align: center;
@@ -12,17 +13,17 @@ const StyledDiv = styled.div`
     height: 100%;
     background: url(${diggle});
 `;
-
+// Title stuff make white
 const Title = styled.h1`
     font-size: 2.5em;
     color: white;
 `;
-
+//White subtitles smaller size
 const Subtitle = styled.h2`
     font-size: 1.5em;
     color: white;
 `;
-
+// Image container that rotates when hovered 
 const Image = styled.img`
     padding-top: 1%;
     width: 50vh;
@@ -33,7 +34,7 @@ const Image = styled.img`
         transform: rotate(360deg); 
     }
 `;
-
+// simple title then image and subtitle. 
 export default function Home() {
     return (
         <StyledDiv>
