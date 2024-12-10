@@ -22,7 +22,8 @@ const Loading = styled.h1`
 `;
 
 const Pokeball = styled.img`
-    margin: 25% 0;
+    margin: -5% 0;
+    padding-bottom: 15%;
 `;
 
 const CardImage = styled.img`
