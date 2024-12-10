@@ -1,37 +1,44 @@
+// Home page done by David Kim
 import styled from "styled-components";
-
 import diglett from "../../public/diglett.png";
-
+import diggle from "../../public/diggle.png";
 
 const StyledDiv = styled.div`
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
+    padding: 23px;
+    width: 100%;
+    height: 100%;
+    background: url(${diggle});
 `;
 
 const Title = styled.h1`
     font-size: 2.5em;
-    color: saddlebrown;
+    color: white;
 `;
 
 const Subtitle = styled.h2`
     font-size: 1.5em;
-    color: lightpink;
+    color: white;
 `;
 
 const Image = styled.img`
-    padding-top: 5%;
+    padding-top: 1%;
     width: 50vh;
     height: auto;
     margin-top: 20px;
+    transition: transform 2s ease-in-out; 
+    &:hover {
+        transform: rotate(360deg); 
+    }
 `;
 
 export default function Home() {
     return (
         <StyledDiv>
             <Title>Welcome to our Pokemon Pack Opening site!</Title>
-            <Subtitle>Discover and collect your favorite Pokemon cards!</Subtitle>
             <Image src={diglett} alt="Mascot" />
+            <Subtitle>Discover and collect your favorite Pokemon cards!</Subtitle>
         </StyledDiv>
     );
 }
